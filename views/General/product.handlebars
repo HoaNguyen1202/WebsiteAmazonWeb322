@@ -1,0 +1,59 @@
+    <section class="product_list section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product_sidebar">
+                        <div class="single_sedebar">
+                            <form class="row contact_form" action="/product/search" method="post">
+                                <h2>{{error}}</h2>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="name" name="product_name"
+                                      placeholder="what are you looking for?">
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Categories
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/product/search/homecategory">Home Appliances</a>
+                                    <a class="dropdown-item" href="/product/search/electronics">Electronics</a>
+                                    <a class="dropdown-item" href="/product/search/decor">Decor</a>
+                                    <a class="dropdown-item" href="/product/search/Cosmetic">Cosmetic</a>
+                                </div>
+                                </div>
+                                </div>
+                                
+
+                                <div class="col-md-12 form-group" style="text-align: right;">       
+                                 <button type="submit" value="submit" class="btn_3" style="width: 100%;">
+                                        Search
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="product_list">
+                        <div class="row">
+                            {{#each allP}}
+                            <div class="col-lg-6 col-sm-6">
+                                <a href="/product/{{this._id}}">
+                                <div class="single_product_item">
+                                    <img src="/img/{{this.product_picture}}" alt="image" class="img-fluid">
+                                    <h3> {{this.product_name}} </h3>
+                                    <p>${{this.product_price}}</p>
+                                </div></a>
+                            </div>
+                            {{/each}}
+                        </div>
+                        <div class="load_more_btn text-center">
+                            <a href="#" class="btn_3">Load More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

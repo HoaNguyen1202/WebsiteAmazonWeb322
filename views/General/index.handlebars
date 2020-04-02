@@ -1,0 +1,148 @@
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="banner_text" style="padding-inline-start: 60px;">
+                        <div class="banner_text_iner">
+                            <h2>Stay at home<br>
+                                We bring it to you</h2>
+                            <p>free shipping over 2000 items 
+                                </p>
+                            <a href="/product" class="btn_1">shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner_img">
+            <img src="img/banner.png" alt="#" class="img-fluid">
+            <img src="img/banner_pattern.png " alt="#" class="pattern_img img-fluid">
+        </div>
+    </section>
+<!-- best seller section-->
+       <section class="trending_items" style="padding: 25px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2>Best Sellers</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {{#each bestSelling}}
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/product/{{this._id}}">
+                    <div class="single_product_item">
+                        <div class="single_product_item_thumb">
+                            <img src="/img/{{this.product_picture}}" alt="image" class="img-fluid">
+                        </div>
+                        <h3> {{this.product_name}} </h3>
+                        <p>${{this.product_price}}</p>
+                    </div>
+               </a></div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+<!-- category-->
+    <section class="trending_items" style="padding: 25px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2>Categories</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/product/search/electronics">
+                        <div class="single_product_item">
+                            <div class="single_product_item_thumb">
+                                <img src="/img/samsung.jpg" alt="image" class="img-fluid">
+                            </div>
+                            <h3> Electronic </h3>
+                            <p>learn more >></p>
+                        </div>
+                    </a></div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/product/search/homecategory">
+                        <div class="single_product_item">
+                            <div class="single_product_item_thumb">
+                                <img src="/img/home.jpg" alt="image" class="img-fluid">
+                            </div>
+                            <h3> Home appliances</h3>
+                            <p>learn more >></p>
+                        </div>
+                    </a></div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/product/search/decor">
+                        <div class="single_product_item">
+                            <div class="single_product_item_thumb">
+                                <img src="/img/decor.jpg" alt="image" class="img-fluid">
+                            </div>
+                            <h3> Decoration </h3>
+                            <p>learn more >></p>
+                        </div>
+                    </a></div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/product/search/cosmetic">
+                        <div class="single_product_item">
+                            <div class="single_product_item_thumb">
+                                <img src="/img/cosmetic.jpg" alt="image" class="img-fluid">
+                            </div>
+                            <h3> Cosmetic </h3>
+                            <p>learn more >></p>
+                        </div>
+                    </a></div>
+
+            </div>
+        </div>
+    </section>
+
+        <section class="feature_part section_padding">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6">
+                    <div class="feature_part_tittle">
+                        <h3>We are changing keep our staff stay safe, so are you</h3>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="feature_part_content">
+                        <p>Free shipping over 2000 items.
+                            <br>Other online grocery retailers charge up to 26$ for delivery,
+                            <br>but our's free!  
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_feature_part">
+                        <img src="img/icon/feature_icon_1.svg" alt="#">
+                        <h4>Credit Card Support</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_feature_part">
+                        <img src="img/icon/feature_icon_2.svg" alt="#">
+                        <h4>Online Order</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_feature_part">
+                        <img src="img/icon/feature_icon_3.svg" alt="#">
+                        <h4>Free Delivery</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_feature_part">
+                        <img src="img/icon/feature_icon_4.svg" alt="#">
+                        <h4>Product with Gift</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
