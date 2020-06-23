@@ -144,7 +144,7 @@ router.post("/addproduct", (req, res) => {
             } else {
                 if (req.session.user.isClerk) {
                     //check image uploaded or not
-                    if (!req.files.product_picture || !(path.parse(req.files.product_picture.name).ext === ".png" || path.parse(req.files.product_picture.name).ext === ".jpg" || path.parse(req.files.product_picture.name).ext === ".tiff" || path.parse(req.files.product_picture.name).ext === ".gif")) {
+                    if (!req.files.product_picture || !(path.parse(req.files.product_picture.name).ext === ".png" || path.parse(req.files.product_picture.name).ext === ".JPG" || path.parse(req.files.product_picture.name).ext === ".tiff" || path.parse(req.files.product_picture.name).ext === ".gif")) {
                         //wrong type, file not exist
                         err.push(`wrong type or file not exist`);
                         res.render("General/sell", {
